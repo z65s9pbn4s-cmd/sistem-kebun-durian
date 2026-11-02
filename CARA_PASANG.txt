@@ -1,0 +1,13 @@
+DURIAN FARM MANAGER — PWA
+
+1. Muat naik semua fail dalam folder ini ke satu repository GitHub.
+2. Pada GitHub: Settings > Pages > Deploy from a branch > main > /(root) > Save.
+3. Tunggu GitHub Pages menerbitkan laman web HTTPS.
+4. Buka URL GitHub Pages itu menggunakan Safari pada iPhone.
+5. Tekan Share > Add to Home Screen > Add.
+
+Nota:
+- Ini versi web app, bukan fail IPA/App Store.
+- Data disimpan secara setempat pada browser/peranti melalui localStorage. Jangan clear website data; buat eksport/backup sebelum kemas kini besar.
+- Foto disimpan sebagai data URL dalam localStorage; had storan browser mungkin terpakai. Untuk penggunaan lama, tambah storan IndexedDB dan fungsi eksport sandaran.
+- Jangan masukkan maklumat peribadi sensitif. Aplikasi ini belum mempunyai sync awan.
