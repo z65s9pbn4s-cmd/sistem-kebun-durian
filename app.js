@@ -41,7 +41,7 @@ function render(){
  }
  if(tab==='photos'){
   const x=data.photos.find(t=>String(t.id)===String(editing.photos));
-  app.innerHTML=formHead('📷 Gambar perkembangan pokok','photos',x)+`<label>Ambil / pilih gambar ${x?'(pilih jika mahu gantikan gambar)':''}</label><input name="image" type="file" accept="image/*" capture="environment" ${x?'':'required'}>`+field('Tarikh','date',val(x,'date')||isoDate(),'date')+field('Kod pokok','tree',val(x,'tree'))+area('Pemerhatian','notes',val(x,'notes'))+formEnd('photos',x,'Tambah gambar')+`<div class="card">${recordList('photos',t=>`<strong>${val(t,'tree')} · ${val(t,'date')}</strong><small>${val(t,'notes')}</small>${t.image?`<img class="photo" src="${t.image}" alt="Foto pokok">`:''}`)}</div>`;
+  app.innerHTML=formHead('📷 Gambar perkembangan pokok','photos',x)+`<label>Ambil / pilih gambar ${x?'(pilih jika mahu gantikan gambar)':''}</label><input name="image" type="file" accept="image/*" ${x?'':'required'}>`+field('Tarikh','date',val(x,'date')||isoDate(),'date')+field('Kod pokok','tree',val(x,'tree'))+area('Pemerhatian','notes',val(x,'notes'))+formEnd('photos',x,'Tambah gambar')+`<div class="card">${recordList('photos',t=>`<strong>${val(t,'tree')} · ${val(t,'date')}</strong><small>${val(t,'notes')}</small>${t.image?`<img class="photo" src="${t.image}" alt="Foto pokok">`:''}`)}</div>`;
  }
  if(tab==='tasks'){
   const x=data.tasks.find(t=>String(t.id)===String(editing.tasks));
